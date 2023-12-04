@@ -1,0 +1,41 @@
+{ // Prerequisite :
+    // 1. Install MSBuild Tools on windows
+    // 2. Install gcc, gdb, gdbserver on ubuntu
+    //
+    "version": "2.0.0",
+    "runner": "terminal",
+    "tasks": [
+        {
+            "label": "build_x64_release",
+            "command": "path_to/MSBuild.exe",
+            "args": [
+                "/p:Configuration=Release;Platform=x64;PlatformToolset=v142",
+                "winport/hello.sln"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "build_x64_debug",
+            "command": "path_to/MSBuild.exe",
+            "args": [
+                "/p:Configuration=Debug;Platform=x64;PlatformToolset=v142",
+                "winport/hello.sln"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "build_linux64_debug",
+            "type": "shell",
+            "command": "./build_hello.sh -d",
+            "group": "build"
+        },
+        {
+            "label": "build_linux64_release",
+            "type": "shell",
+            "command": "./build_hello.sh",
+            "group": "build"
+        }
+    ]
+}

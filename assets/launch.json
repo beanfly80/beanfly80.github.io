@@ -1,0 +1,66 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "x64_debug",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "hello_win.exe",
+            "args": ["arg1", "arg2", "..."],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/out/win_x64Debug_v142",
+            "preLaunchTask": "build_x64_debug"
+        },
+        {
+            "name": "x64_release",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "hello_win.exe",
+            "args": ["${command:SpecifyScriptArgs}"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/out/win_x64Release_v142",
+            "preLaunchTask": "1-build_x64_release"
+        },
+        {
+            "name": "gdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/out/linux_debug/hello",
+            "args": ["arg1", "arg2", "..."],
+            "cwd": "${workspaceRoot}/out/linux_debug/",
+            "environment": [
+                {"name":"LD_LIBRARY_PATH", "value":"${workspaceRoot}/out/linux_debug/"}],
+            "preLaunchTask": "build_linux64_debug"
+        },
+        {
+            "name": "gdbserver",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/out/linux_debug/hello",
+            "MIMode": "gdb",
+            "miDebuggerServerAddress": "localhost:${input:myPort}",
+            "args": ["arg1", "arg2", "..."],
+            "cwd": "${workspaceRoot}/out/linux_debug/",
+            "environment": [
+                {"name":"LD_LIBRARY_PATH", "value":"${workspaceRoot}/out/linux_debug/"}],
+            "preLaunchTask": "build_linux64_debug"
+        },
+        {
+            "name": "py_hello",
+            "description": "Launch hello",
+            "type": "python",
+            "request": "launch",
+            "program": "./build_mobile.py",
+            "console": "integratedTerminal",
+            "args": ["arg1","arg2", "..."]
+        }
+      ],
+      "inputs": [
+        {
+          "id": "myPort",
+          "type": "promptString",
+          "description": "Enter your port number",
+          "default": "54321"
+        }
+      ]
+}
