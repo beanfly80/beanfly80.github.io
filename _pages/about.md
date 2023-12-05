@@ -49,7 +49,7 @@ permalink: /about/
 1. github with jekyll
     - 사이트 작성
         - https://jekyllrb.com/docs/github-pages/
-        - theme : default
+        - theme : ~~default(minima)~~ reverie
         ```
         bundle exec jekyll serve
         ## server address: http://127.0.0.1:4000/

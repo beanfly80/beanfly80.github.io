@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "책"
-categories: favorite
-date : 2018-10-25 20:17:43 +09:00
+layout: page
+title: book
+permalink: /book/
 ---
 
 2023.11. 모스크바의 신사 - 에이모 토울스

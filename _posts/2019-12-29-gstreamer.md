@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Gstreamer"
 categories: dev
 date : 2019-12-29 20:09:40 +09:00

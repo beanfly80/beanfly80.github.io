@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Hello Java"
 categories: dev
 date : 2023-10-09 20:17:43 +09:00

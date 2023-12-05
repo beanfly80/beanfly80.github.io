@@ -1,10 +1,9 @@
 ---
-layout: post
+layout: default
 title:  "Design pattern"
 date:   2022-10-01 11:07:53 +0900
 categories: dev
 ---
-# Design pattern
 
 ToC
 - API Design pattern
