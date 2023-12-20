@@ -141,7 +141,7 @@ Java Application을 실행하기 위한 가상의 기계 환경
                 +- MashMap (use ArrayList) 
                     +- LinkedHashMap (use LinkedList)
         ```
-    - 왜 hashmap 검색이 빠른가
+    - **왜 hashmap 검색이 빠른가**
         1. hased key가 index되어 이용됨
         1. shift operation 이용하여, CPU 사용량 줄임 
 
